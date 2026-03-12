@@ -30,12 +30,21 @@ public class FootwearController {
 	
 	
 	@GetMapping("/query")
-	public String queryParam(@RequestParam(name = "name",defaultValue = "Guest") String user,Model model) {
+	public String queryParam(@RequestParam(name = "user",defaultValue = "Guest") String name,Model model) {
 		
-		model.addAttribute("user", user);
-		System.out.println("WelcomeController.queryPara : "+user);
+		model.addAttribute("user", name);
+		System.out.println("WelcomeController.queryPara : "+name);
 		return "success";
 	}
+	
+	
+//	@GetMapping("/req-param")
+//	public String createUser(@RequestParam(name="user",defaultValue ="MY-DEFAULT-NAME" ) String name, Model model) {
+//		model.addAttribute("user", name);
+//    System.out.println("WelcomeController.greeting :" + name);
+//	return "success";
+//	
+//	}
 	
 }
 
