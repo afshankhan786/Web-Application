@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring MVC Project</title>
+<title>Insert title here</title>
 </head>
-<body bgcolor="lightgreen">
+<body>
+	<h1>Welcome this is a Footwear Section How Can i help you</h1>
 
-<h1>this is my first program</h1>
 </body>
 </html>

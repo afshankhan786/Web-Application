@@ -8,6 +8,7 @@
 </head>
 <body bgcolor="lightgreen">
 
-<h1>Welcome ${user} ! This is your profile</h1>
+	<h1>Welcome this is a Electronic Section How Can i help you</h1>
+
 </body>
 </html>

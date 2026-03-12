@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring MVC Project</title>
+<title>Insert title here</title>
 </head>
-<body bgcolor="lightgreen">
-
-<h1>Welcome ${user} ! This is your profile</h1>
+<body>
+	<h1>Welcome this is a Grocery Section How Can i help you</h1>
 </body>
 </html>
