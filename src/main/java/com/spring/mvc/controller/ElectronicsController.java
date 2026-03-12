@@ -19,14 +19,14 @@ public class ElectronicsController {
 	
 	}
 	
-	
-	@GetMapping("/sing-up")
-	public String createUser(@RequestParam("user") String userN, Model model) {
-	 model.addAttribute("user", userN);	
-    System.out.println("WelcomeController.greeting()");
-	return "success";
-	
-	}
+//	
+//	@GetMapping("/singUp")
+//	public String singUP(@RequestParam(name="name",defaultValue = "Guest") String userN, Model model) {
+//	 model.addAttribute("userN", userN);	
+//    System.out.println("WelcomeController.greeting()"+userN);
+//	return "success";
+//	
+//	}
 	
 }
 

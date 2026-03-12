@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/ footwear")
+@RequestMapping("/footwear")
 public class FootwearController {
 	
 //@RequestMapping	(value="/login",method = RequestMethod.GET)
@@ -20,12 +20,21 @@ public class FootwearController {
 	}
 	
 	
-	@GetMapping("/sing-up")
-	public String createUser(@RequestParam("user") String userN, Model model) {
-	 model.addAttribute("user", userN);	
-    System.out.println("WelcomeController.greeting()");
-	return "success";
+//	@GetMapping("/sing-up")
+//	public String createUser(@RequestParam("user") String userN, Model model) {
+//	 model.addAttribute("user", userN);	
+//    System.out.println("WelcomeController.greeting()");
+//	return "success";
+//	
+//	}
 	
+	
+	@GetMapping("/query")
+	public String queryParam(@RequestParam(name = "name",defaultValue = "Guest") String user,Model model) {
+		
+		model.addAttribute("user", user);
+		System.out.println("WelcomeController.queryPara : "+user);
+		return "success";
 	}
 	
 }

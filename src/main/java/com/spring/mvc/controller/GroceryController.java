@@ -20,13 +20,13 @@ public class GroceryController {
 	}
 	
 	
-	@GetMapping("/sing-up")
-	public String createUser(@RequestParam("user") String userN, Model model) {
-	 model.addAttribute("user", userN);	
-    System.out.println("WelcomeController.greeting()");
-	return "success";
-	
-	}
+//	@GetMapping("/sing-up")
+//	public String createUser(@RequestParam("user") String userN, Model model) {
+//	 model.addAttribute("user", userN);	
+//    System.out.println("WelcomeController.greeting()");
+//	return "success";
+//	
+//	}
 	
 }
 
