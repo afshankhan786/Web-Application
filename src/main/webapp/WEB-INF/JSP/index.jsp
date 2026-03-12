@@ -8,6 +8,6 @@
 </head>
 <body bgcolor="lightgreen">
 
-<h1>this is my first program</h1>
+<h1>This Is My First Spring MVC Project</h1>
 </body>
 </html>
