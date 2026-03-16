@@ -27,13 +27,15 @@ public class AdminController {
 	
 
 	@PostMapping("/singupAdmin")
-	public String postAdmin(@RequestParam(name = "adminname")String adminname,@RequestParam(name = "department")String department,@RequestParam(name = "address")String adderss,Model model) {
+	public String postAdmin(@RequestParam(name = "adminname")String adminname, @RequestParam(name ="adminage")String adminage,@RequestParam(name = "department")String department,@RequestParam(name = "address")String adderss,Model model) {
 		
 		System.out.println("adminname :"+ adminname);
+		System.out.println("adminage :"+ adminage);
 		System.out.println("department :"+department);
 		System.out.println("adderss :" +adderss);
 		
 		model.addAttribute("adminname", adminname);
+		model.addAttribute("adminage", adminage);
 		model.addAttribute("department",department);
 		model.addAttribute("adderss", adderss);
 		

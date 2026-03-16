@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sing-Up-Form</title>
 
 <style>
 body{
@@ -41,9 +41,12 @@ button{
 <!-- localhost:8080/WebApp/signupUser-->
 <div class="container">
 <h2>Sing-up</h2>
-<form action="${pageContext.request.contextPath}/creatAdmin" method="post">
-<label>Adminname:</label>
+<form action="${pageContext.request.contextPath}/singupAdmin" method="post">
+<label>Admin-name:</label>
 <input type ="text" name="adminname" required>
+
+<label>Admin-age:</label>
+<input type="number" name="adminage" required>
 
 <label>Department:</label>
 <input type="text" name="department" required>

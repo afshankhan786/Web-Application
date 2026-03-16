@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring MVC Project</title>
+<title>Success MVC Project</title>
 </head>
 <body bgcolor="lightgreen">
 
-<h1>Welcome ! This is your NAME Mr : ${adminname}</h1>
-<h1>Welcome ! This is your DEPARTMENT : ${department}</h1>
-<h1>Welcome ! This is your ADDRESS: ${address}</h1>
+<h1>Welcome ! This is your Name Mr : ${adminname}</h1>
+<h1>Welcome ! This is your Age : ${adminage}</h1>
+<h1>Welcome ! This is your Departmrnt : ${department}</h1>
+<h1>Welcome ! This is your Address: ${address}</h1>
 </body>
 </html>
