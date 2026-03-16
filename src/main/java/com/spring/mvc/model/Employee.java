@@ -1,0 +1,51 @@
+package com.spring.mvc.model;
+
+
+public class Employee {
+
+	private String adminname,department,address;
+
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Employee(String adminname, String department, String address) {
+		super();
+		this.adminname = adminname;
+		this.department = department;
+		this.address = address;
+	}
+
+	public String getAdminname() {
+		return adminname;
+	}
+
+	public void setAdminname(String adminname) {
+		this.adminname = adminname;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [adminname=" + adminname + ", department=" + department + ", address=" + address + "]";
+	}
+	
+	
+	
+}

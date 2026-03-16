@@ -8,6 +8,8 @@
 </head>
 <body bgcolor="lightgreen">
 
-<h1>Welcome ! This is your profile Mr. ${user}</h1>
+<h1>Welcome ! This is your NAME Mr : ${adminname}</h1>
+<h1>Welcome ! This is your DEPARTMENT : ${department}</h1>
+<h1>Welcome ! This is your ADDRESS: ${address}</h1>
 </body>
 </html>
