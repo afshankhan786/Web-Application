@@ -3,6 +3,7 @@ package com.spring.mvc.model;
 
 public class Employee {
 
+	private int id;
 	private String adminname,department,address;
 
 	public Employee() {
@@ -10,11 +11,22 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(String adminname, String department, String address) {
+	public Employee(int id,String adminname, String department, String address) {
 		super();
+		this.id = id;
 		this.adminname = adminname;
 		this.department = department;
 		this.address = address;
+	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getAdminname() {
@@ -43,7 +55,8 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [adminname=" + adminname + ", department=" + department + ", address=" + address + "]";
+		return "Employee [id=" + id + ", adminname=" + adminname + ", department=" + department + ", address=" + address
+				+ "]";
 	}
 	
 	

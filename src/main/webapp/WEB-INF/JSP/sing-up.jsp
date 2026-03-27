@@ -41,12 +41,12 @@ button{
 <!-- localhost:8080/WebApp/signupUser-->
 <div class="container">
 <h2>Sing-up</h2>
-<form action="${pageContext.request.contextPath}/singupAdmin" method="post">
+<form action="${pageContext.request.contextPath}/creatAdmin" method="post">
 <label>Admin-name:</label>
 <input type ="text" name="adminname" required>
 
-<label>Admin-age:</label>
-<input type="number" name="adminage" required>
+<!-- <label>Admin-age:</label>
+<input type="number" name="adminage" required> -->
 
 <label>Department:</label>
 <input type="text" name="department" required>
