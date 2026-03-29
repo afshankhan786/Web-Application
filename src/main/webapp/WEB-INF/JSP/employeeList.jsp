@@ -14,7 +14,7 @@
         <th>ID</th>
         <th>Name</th>
         <th>Department</th>
-        <th>Salary</th>
+        <th>address</th>
     </tr>
     <c:forEach var="employee" items="${employees}">
         <tr>
