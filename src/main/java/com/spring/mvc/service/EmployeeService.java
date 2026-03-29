@@ -1,5 +1,7 @@
 package com.spring.mvc.service;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,10 @@ public class EmployeeService {
 	public void saveEmployee(Employee emp) {
 		System.out.println("EmployeeService.saveEmployee()");
 		employeeDao.saveEmployee(emp);
+	}
+
+	public List<Employee> getAllEmployees() {
+		return employeeDao.getAllEmployees();
 	}
 	
 	
