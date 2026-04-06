@@ -1,63 +1,80 @@
-package com.spring.mvc.controller;
+	package com.spring.mvc.controller;
 
-import java.util.HashMap;
+	import java.util.HashMap;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+	import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.spring.mvc.model.Employee;
-import com.spring.mvc.service.EmployeeService;
+	import com.spring.mvc.model.Employee;
 
-@Controller
-public class EmployeeController {
-	
-	@Autowired
-	EmployeeService employeeService;
-	
-	
-	
-	@GetMapping("/")
-	public String Welcome() {
-		System.out.println("EmployeeController.Welcome()");
-		return "index";
-	}
-	
-	@GetMapping("/sing-up")
-	public String SingUpForm(){
-	System.out.println("EmployeeController.SingUpForm()");
-	return "sing-up";
-	}
-	
-	
+	@Controller
+	@ResponseBody
+	public class EmployeeController {
+		
+		private static int empId = 0;
+		
+		static Map<Integer,Employee>employeeMap = new HashMap<>();
+		static {
+			employeeMap.put(++empId, new Employee(empId, "Raju","Java", "GBD"));
+			employeeMap.put(++empId, new Employee(empId, "Rani","CCC", "NOIDA"));
+			employeeMap.put(++empId, new Employee(empId, "Monu","C++", "DEHLI"));
+			employeeMap.put(++empId, new Employee(empId, "Sonu","PHP", "AGRA"));
+			employeeMap.put(++empId, new Employee(empId, "Shamu","PYTHON", "MEERUT"));
 
-	
-	
-	@PostMapping("/creatAdmin")
-	public String creatAdmin(@ModelAttribute Employee emp,Model model) {
-		employeeService.saveEmployee(emp); 
-		return "success";
+		}
+		
+		@GetMapping("/")
+		public String getData()
+		{
+			System.out.println("EmployeeController.getData()");
+			
+			return "Hello This is my first RestApi";
+		}
+		
+		
+		@GetMapping("/getEmp")
+		public Employee getDummyObj()
+		{
+			System.out.println("EmployeeController.getDummyObj()");
+			Employee e = new Employee(1,"Dummy", "CS","NOIDA");
+			
+			return e;
+		}
+		
+		
+		@PostMapping("/CreateEmp")
+		public Employee createEmployee(@RequestBody Employee employee) {
+			employee.setId(++empId);
+			employeeMap.put(employee.getId(),employee);		
+			System.out.println("EmployeeController.createEmployee()");
+			return employee;
+		
+		}
+		
+		
+		@GetMapping("/getEmpById/{id}")
+		public Employee getEmpById(@PathVariable("id")int id)
+		{
+			System.out.println("EmployeeController.getEmpById()");
+			return employeeMap.get(id);
+			
+			
+		}
+		
+
+		@GetMapping("/getAllEmp")
+		public Map<Integer,Employee> getAllEmp() {
+
+			System.out.println("EmployeeController.getAllEmp()");
+			return employeeMap;
+			
+			
+		}
 		
 	}
-	
-	
-	@GetMapping("/getEmpById/{id}")
-	public String getEmp(@PathVariable(name = "id") int id,Model model) {
-		return "success"; 
-		
-	}
-	
-	@GetMapping("/employees")
-	public String listEmployees(Model model) {
-		model.addAttribute("employees",employeeService.getAllEmployees());
-		return "employeeList";
-		
-	}
-	
-}
+
